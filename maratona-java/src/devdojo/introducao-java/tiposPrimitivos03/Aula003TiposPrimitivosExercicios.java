@@ -1,3 +1,4 @@
+package tiposPrimitivos03;
 public class Aula003TiposPrimitivosExercicios {
     public static void main(String[] args) {
         String nome = "Jorge";
