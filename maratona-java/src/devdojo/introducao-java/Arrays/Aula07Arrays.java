@@ -1,6 +1,6 @@
 package Arrays;
 
-public class Aula007Arrays {
+public class Aula07Arrays {
     public static void main(String[] args) {
         
         int [] idades = new int[3];
