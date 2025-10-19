@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "maratona-java\\src\\devdojo\\introducao-java"
+        "maratona-java/src/devdojo/introducao-java",
+        "maratona-java/src/devdojo/orientacaoobjetos/test"
     ],
     "java.project.referencedLibraries": []
 }
