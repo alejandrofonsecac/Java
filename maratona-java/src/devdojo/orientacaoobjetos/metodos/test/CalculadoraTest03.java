@@ -7,5 +7,8 @@ public class CalculadoraTest03 {
 
         double result = calculadora.divideNumeros(20,4);
         System.out.println(result);
+        System.out.println("----------------");
+
+        calculadora.imprimiDivisao(86,2);
     }
 }
