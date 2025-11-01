@@ -15,8 +15,8 @@ public class CalculadoraTest04 {
 
         int[] resultado = calculadora.alteraDoisNumeros(num1,num2);
 
-        System.out.println("O array retornado da outra classe" +
-                "tem tamanho de: " + resultado.length);
+        System.out.println("O array retornado da outra classe"
+                + "tem tamanho de: " + resultado.length);
         System.out.println("Primeiro numero: " + resultado[0]);
         System.out.println("Segundo numero: " + resultado[1]);
     }

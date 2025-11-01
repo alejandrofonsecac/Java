@@ -32,18 +32,34 @@ public class Calculadora{
 
     //Test04
 
-    public int[] alteraDoisNumeros(int num1, int num2){
+    public int[] alteraDoisNumeros(int num1, int num2) {
         num1 = 99;
         num2 = 67;
 
         System.out.println(num1);
         System.out.println(num2);
 
-        int[] numeros = new int [2];
+        int[] numeros = new int[2];
         numeros[0] = num1;
         numeros[1] = num2;
 
         return numeros;
+    }
+
+    public void somaArray(int[] numeros){
+        int soma = 0;
+        for(int num: numeros){
+            soma += num;
+        }
+        System.out.println(soma);
+    }
+
+    public void somaVarArgs(int... numeros){
+        int soma = 0;
+        for(int num: numeros){
+            soma += num;
+        }
+        System.out.println(soma);
     }
 }
 
