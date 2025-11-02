@@ -1,6 +1,5 @@
-package devdojo.orientacaoobjetos.metodos.exercicios.salario.test;
-import devdojo.orientacaoobjetos.metodos.exercicios.salario.test.main;
-import devdojo.orientacaoobjetos.metodos.exercicios.salario.dominio.Funcionario;
+package devdojo.orientacaoobjetos.Bmetodos.exercicios.salario.test;
+import devdojo.orientacaoobjetos.Bmetodos.exercicios.salario.dominio.Funcionario;
 
 public class imprimirFuncionario {
     public void imprimi(Funcionario[] funcionario){

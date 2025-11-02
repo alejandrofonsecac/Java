@@ -1,5 +1,5 @@
-package devdojo.orientacaoobjetos.metodos.test;
-import devdojo.orientacaoobjetos.metodos.Calculadora;
+package devdojo.orientacaoobjetos.Bmetodos.test;
+import devdojo.orientacaoobjetos.Bmetodos.Calculadora;
 
 public class CalculadoraTest05 {
     public static void main(String[] args) {

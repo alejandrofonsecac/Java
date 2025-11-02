@@ -1,4 +1,4 @@
-package devdojo.orientacaoobjetos.metodos.dominio;
+package devdojo.orientacaoobjetos.Bmetodos.dominio;
 
 public class Estudante {
 

@@ -1,4 +1,4 @@
-package devdojo.orientacaoobjetos.metodos.exercicios.salario.dominio;
+package devdojo.orientacaoobjetos.Bmetodos.exercicios.salario.dominio;
 
 public class Funcionario {
 

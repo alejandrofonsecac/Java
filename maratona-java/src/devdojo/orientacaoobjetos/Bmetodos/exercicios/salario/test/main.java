@@ -1,7 +1,5 @@
-package devdojo.orientacaoobjetos.metodos.exercicios.salario.test;
-import devdojo.orientacaoobjetos.metodos.exercicios.salario.dominio.Funcionario;
-import devdojo.orientacaoobjetos.metodos.exercicios.salario.test.imprimirFuncionario;
-import devdojo.orientacaoobjetos.metodos.exercicios.salario.test.mediaSalarial;
+package devdojo.orientacaoobjetos.Bmetodos.exercicios.salario.test;
+import devdojo.orientacaoobjetos.Bmetodos.exercicios.salario.dominio.Funcionario;
 
 public class main {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package devdojo.orientacaoobjetos.metodos.exercicios.salario.test;
+package devdojo.orientacaoobjetos.Bmetodos.exercicios.salario.test;
 
-import devdojo.orientacaoobjetos.metodos.exercicios.salario.dominio.Funcionario;
+import devdojo.orientacaoobjetos.Bmetodos.exercicios.salario.dominio.Funcionario;
 
 public class mediaSalarial {
     public void mediaDoSalario(Funcionario[] funcionarios){

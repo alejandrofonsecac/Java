@@ -1,6 +1,6 @@
-package devdojo.orientacaoobjetos.metodos.test;
+package devdojo.orientacaoobjetos.Bmetodos.test;
 
-import devdojo.orientacaoobjetos.metodos.dominio.Pessoa;
+import devdojo.orientacaoobjetos.Bmetodos.dominio.Pessoa;
 
 public class PessoaTest01 {
     public static void main(String[] args) {

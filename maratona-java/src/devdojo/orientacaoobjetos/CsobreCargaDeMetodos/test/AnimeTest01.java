@@ -1,5 +1,5 @@
-package devdojo.orientacaoobjetos.SobreCargaDeMetodos.test;
-import  devdojo.orientacaoobjetos.SobreCargaDeMetodos.dominio.Anime;
+package devdojo.orientacaoobjetos.CsobreCargaDeMetodos.test;
+import  devdojo.orientacaoobjetos.CsobreCargaDeMetodos.dominio.Anime;
 
 public class AnimeTest01 {
     public static void main(String[] args) {

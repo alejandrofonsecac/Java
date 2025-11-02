@@ -1,5 +1,4 @@
-package devdojo.orientacaoobjetos.metodos.dominio;
-import devdojo.orientacaoobjetos.metodos.dominio.Estudante;
+package devdojo.orientacaoobjetos.Bmetodos.dominio;
 
 public class impressoraEstudante {
     public void imprime(Estudante estudante) {
