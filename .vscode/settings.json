@@ -2,7 +2,7 @@
     "java.project.sourcePaths": [
         "maratona-java/src/devdojo/orientacaoobjetos/test",
         "maratona-java/src/devdojo/introducao-java",
-        "maratona-java/src/devdojo/oopjava/test"
+        "maratona-java/src/devdojo/orientacaoobjetos/metodos/exercicios/salario/test"
     ],
     "java.project.referencedLibraries": []
 }
