@@ -4,11 +4,9 @@ import devdojo.orientacaoobjetos.Dconstutores.dominio.Anime;
 
 public class AnimeTest01 {
     public static void main(String[] args) {
-        Anime anime = new Anime("Mushoku tensei", "TV", 56, "Isekai");
-        Anime anime2 = new Anime(); //Constructor nao inicializado
+        Anime anime = new Anime("Mushoku tensei", "TV", 56, "Isekai", "Mapa");
 
         anime.imprimir();
         System.out.println("----------");
-        anime2.imprimir();
     }
 }
