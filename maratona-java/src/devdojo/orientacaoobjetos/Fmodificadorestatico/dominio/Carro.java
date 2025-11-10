@@ -7,6 +7,8 @@ public class Carro {
     //Com o modificador static significa que todos os
     // objetos irao receber o mesmo valor
     // ...E que a variavel pertence a esta classe
+    //Ele vai permanecer ESTATICO para todos os
+    //  itens dentro do objeto
 
     public void imprimir(){
         System.out.println("---------");
