@@ -28,6 +28,8 @@ public class Escola {
         }
     }
 
+
+    // Getters and Setters
     public String getNome() {
         return nome;
     }

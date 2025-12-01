@@ -6,12 +6,12 @@ import testesJava.mercadoProdutos.dominio.Produtos;
 
 public class EscolaTest01 {
     public static void main(String[] args) {
-        Professor professor1 = new Professor("Alejandro");
-        Professor professor2 = new Professor("Fonseca");
-        Professor[] professores = {professor1, professor2};
-        Escola escola = new Escola("Suplicy", professores);//{1}
+        Professor professor1 = new Professor("Alejandro"); // {1}
+        Professor professor2 = new Professor("Fonseca"); // {1}
+        Professor[] professores = {professor1, professor2}; // {2}
+        Escola escola = new Escola("Suplicy", professores);//{3}
 
-        escola.imprime();//{2}
+        escola.imprime();//{4}
     }
 }
 

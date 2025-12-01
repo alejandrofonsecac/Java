@@ -19,13 +19,12 @@ public class Jogador {
         this.nome = nome;
     }
 
+    //Getters and Setters
     public Time getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
-        this.time = time;
-    }
+    public void setTime(Time time) { this.time = time; }
 
     public String getNome() { return nome; }
 
