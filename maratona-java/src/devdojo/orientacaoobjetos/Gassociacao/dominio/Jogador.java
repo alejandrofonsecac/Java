@@ -6,9 +6,10 @@ public class Jogador {
 
     public void imprimir(){
         System.out.println(this.nome);
+        System.out.println(this.time);
     }
 
-    public void imprimirJogadorTime(){
+    public void imprimirJogadorTime(){// Usar no JogadorTest03
         System.out.println(this.nome);
         if(time != null){
             System.out.println(time.getNome());
@@ -19,7 +20,7 @@ public class Jogador {
         this.nome = nome;
     }
 
-    //Getters and Setters
+    // ---- Getters and Setters ----
     public Time getTime() {
         return time;
     }

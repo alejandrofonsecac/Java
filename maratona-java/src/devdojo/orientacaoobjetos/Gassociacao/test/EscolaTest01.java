@@ -15,6 +15,3 @@ public class EscolaTest01 {
     }
 }
 
-//{1} Puxa o metodo que terá o constructor dentro que lá dentro puxara o nome que seta passado atraves de PROFESSOR
-
-//{2} Exibe no no imprime os professores que a escola terá
