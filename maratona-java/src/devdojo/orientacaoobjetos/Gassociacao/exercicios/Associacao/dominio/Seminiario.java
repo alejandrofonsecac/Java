@@ -1,17 +1,17 @@
 package devdojo.orientacaoobjetos.Gassociacao.exercicios.Associacao.dominio;
 
 public class Seminiario {
-    private String titulo;
+    private String seminiario;
 
-    public Seminiario(String titulo) {
-        this.titulo = titulo;
+    public Seminiario(String seminiario) {
+        this.seminiario = seminiario;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getSeminiario() {
+        return seminiario;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setSeminiario(String titulo) {
+        this.seminiario = seminiario;
     }
 }
