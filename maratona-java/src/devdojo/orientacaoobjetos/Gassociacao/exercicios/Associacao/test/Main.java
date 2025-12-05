@@ -14,16 +14,24 @@ public class Main {
         Aluno aluno = new Aluno("Aluno Alejandro", 16);
         Aluno aluno2 = new Aluno("Aluna Julia", 18);
         Local local = new Local("Rua das Laranjeiras, 213");
-        Seminiario seminiario = new Seminiario("Programação na vida real"); //Titulo do Seminario
+        Seminiario seminario = new Seminiario("Programação na vida real"); //Titulo do Seminario
 
         Aluno[] alunos = {aluno, aluno2};
         professor.setAlunos(alunos);
-        professor.setSeminario(seminiario);
+        professor.setSeminario(seminario);
 
         System.out.println("--- Professor ---");
         professor.imprimirProfessorSeminario();
         System.out.println("Alunos:");
         professor.imprimirAlunos();
-        
+
+        System.out.println("--- Seminário ---");
+        seminario.setLocal(local);
+        seminario.setProfessor(professor);
+        seminario.imprimir();
+
+        System.out.println("--- Alunos ---");
+        aluno.setNome(alunos);
+
     }
 }
