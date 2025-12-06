@@ -26,9 +26,10 @@ public class Professor {
             return;
         }
         for (Aluno aluno : alunos){
-            System.out.println(aluno.getNome());
+            aluno.imprimirAlunos();
         }
     }
+
 
 
     //Getters and Setters
@@ -47,6 +48,10 @@ public class Professor {
 
     public void setAlunos(Aluno[] alunos) {
         this.alunos = alunos;
+
+        for (Aluno aluno : alunos){
+            aluno.imprimirAlunos();
+        }
     }
 
     public Seminiario getSeminario() {

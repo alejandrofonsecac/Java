@@ -30,8 +30,8 @@ public class Main {
         seminario.setProfessor(professor);
         seminario.imprimir();
 
-        System.out.println("--- Alunos ---");
-        aluno.setNome(alunos);
+        System.out.println("Alunos:");
+        professor.imprimirAlunos();
 
     }
 }

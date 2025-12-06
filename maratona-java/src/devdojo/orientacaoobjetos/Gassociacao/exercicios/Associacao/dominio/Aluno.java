@@ -1,32 +1,43 @@
 package devdojo.orientacaoobjetos.Gassociacao.exercicios.Associacao.dominio;
 
 public class Aluno {
-    private Aluno[] alunos;
+    private String nome;
     private int idade;
-    private String professor;
+    private Professor professor;
 
-    public Aluno(Aluno[] alunos, int idade) {
-        this.alunos = alunos;
+    public Aluno(String nome, int idade) {
+        this.nome = nome;
         this.idade = idade;
     }
 
     public void imprimirAlunos(){
-
+        System.out.println(this.nome);
+        System.out.println(this.idade);
+        if(professor != null){
+            System.out.println("Professor: " + professor.getNome());
+        }else {
+            System.out.println("Professor: Nenhum professor");
+        }
+        System.out.println("-----------");
     }
 
-    public Aluno[] getNome() {
-        return alunos;
+
+
+    // Getters and Setters
+
+    public String getNome() {
+        return nome;
     }
 
-    public void setNome(Aluno[] alunos) {
-        this.alunos = alunos;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getProfessor() {
+    public Professor getProfessor() {
         return professor;
     }
 
-    public void setProfessor(String professor) {
+    public void setProfessor(Professor professor) {
         this.professor = professor;
     }
 
