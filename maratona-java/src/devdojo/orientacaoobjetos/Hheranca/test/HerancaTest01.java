@@ -19,9 +19,10 @@ public class HerancaTest01 {
 
         System.out.println("--- Funcionario ---");
         Funcionario funcionario = new Funcionario();
-        funcionario.setNome(funcionario.getNome());
-        funcionario.setEndereco(funcionario.getEndereco());
-        funcionario.setCpf(funcionario.getCpf());
+        funcionario.setNome("Funcionario Arthur");
+        funcionario.setEndereco(endereco);
+        funcionario.setCpf("22222222222");
         funcionario.setSalario(2334.21);
+        funcionario.imprime();
     }
 }
