@@ -4,6 +4,10 @@ public class Funcionario extends Pessoa {
 
     private double salario;
 
+    public Funcionario(String nome){
+        super(nome);
+    }
+
     public void imprime(){
         super.imprime();
         System.out.println("Aqui a baixo terá o que nao será herdade de Pessoa e ele ée unico de FUNCIONARIO");
@@ -11,7 +15,7 @@ public class Funcionario extends Pessoa {
     }
 
     public void relatorioPagaemento(){
-        System.out.println("Eu" + this.nome + " recebo" + this.salario);
+        System.out.println("Eu" + this.nome + " recebo" + this.salario);    
     }
 
     public double getSalario() {
