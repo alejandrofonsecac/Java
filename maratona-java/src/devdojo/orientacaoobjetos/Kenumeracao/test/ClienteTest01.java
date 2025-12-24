@@ -18,5 +18,8 @@ public class ClienteTest01 {
         System.out.println("--------------------------------");
         TipoCliente tipoCliente = TipoCliente.valueOf("PESSOA_FISICA");
         System.out.println(tipoCliente);
+
+        TipoCliente tipoCliente2 = TipoCliente.tipoClientePorNomeRelatorio("PESSOA FISICA");
+        System.out.println("\n" + tipoCliente2);
     }
 }
