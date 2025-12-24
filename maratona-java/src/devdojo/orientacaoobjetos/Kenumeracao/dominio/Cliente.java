@@ -1,25 +1,23 @@
 package devdojo.orientacaoobjetos.Kenumeracao.dominio;
 
 public class Cliente {
-    public enum TipoPagammento{ // Enumeração dentro de uma classe
-        DEBITO,
-        CREDITO
-    }
+
 
     private String nome;
     private TipoCliente tipoCliente;
-    private  TipoPagammento TipoPagamento;
+    private  TipoPagamento TipoPagamento;
 
-    public Cliente(String nome, TipoCliente tipoCliente, TipoPagammento tipoPagamento) {
+    public Cliente(String nome, TipoCliente tipoCliente, TipoPagamento TipoPagamento) {
         this.nome = nome;
         this.tipoCliente = tipoCliente;
-        TipoPagamento = tipoPagamento;
+        TipoPagamento = TipoPagamento;
     }
 
     @Override
     public String toString() {
         return "Cliente{" +
                 "nome='" + nome + '\'' +
+                ", tipoCliente=" + tipoCliente.getNomeRelatorio() +
                 ", tipoCliente=" + tipoCliente.getValor() +
                 ", TipoPagamento=" + TipoPagamento +
                 '}';
@@ -41,11 +39,11 @@ public class Cliente {
         this.tipoCliente = tipoCliente;
     }
 
-    public TipoPagammento getTipoPagamento() {
+    public TipoPagamento getTipoPagamento() {
         return TipoPagamento;
     }
 
-    public void setTipoPagamento(TipoPagammento tipoPagamento) {
+    public void setTipoPagamento(TipoPagamento tipoPagamento) {
         TipoPagamento = tipoPagamento;
     }
 }

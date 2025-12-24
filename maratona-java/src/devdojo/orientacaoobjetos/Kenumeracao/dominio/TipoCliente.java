@@ -1,13 +1,21 @@
 package devdojo.orientacaoobjetos.Kenumeracao.dominio;
 
 public enum TipoCliente {
-    PESSOA_FISICA(1),
-    PESSOA_JURIDICA(2);
+    PESSOA_FISICA(1, "PESSOA FISICA"),
+    PESSOA_JURIDICA(2, "PESSOA JURIDICA");
 
     private final int VALOR;
+    private final String nomeRelatorio;
 
-    TipoCliente(int valor){
+    TipoCliente(int valor, String nomeRelatorio){
         this.VALOR = valor;
+        this.nomeRelatorio = nomeRelatorio;
+    }
+
+    //public static TipoCliente tipoClientePorNomeRelatorio(String nomeRelatorio){
+
+    public String getNomeRelatorio() {
+        return nomeRelatorio;
     }
 
     public int getValor() {
