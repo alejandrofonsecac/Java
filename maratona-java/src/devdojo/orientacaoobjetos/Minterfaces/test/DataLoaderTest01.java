@@ -1,5 +1,6 @@
 package devdojo.orientacaoobjetos.Minterfaces.test;
 
+import devdojo.orientacaoobjetos.Minterfaces.dominio.DataLoader;
 import devdojo.orientacaoobjetos.Minterfaces.dominio.DatabaseLoader;
 import devdojo.orientacaoobjetos.Minterfaces.dominio.FileLoader;
 
@@ -13,5 +14,8 @@ public class DataLoaderTest01 {
         fileLoader.load();
 
         databaseLoader.remove();
+
+        DataLoader.retriveMaxDataSize();
+        DatabaseLoader.retriveMaxDataSize();
     }
 }

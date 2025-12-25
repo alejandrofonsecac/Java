@@ -2,6 +2,7 @@ package devdojo.orientacaoobjetos.Minterfaces.dominio;
 
 public class DatabaseLoader implements DataLoader, DataRemover {
 
+    // Private => default => protected => public
     @Override
     public void checkPermission() {
         DataLoader.super.checkPermission();
@@ -17,5 +18,8 @@ public class DatabaseLoader implements DataLoader, DataRemover {
         System.out.println("Removendo dados do banco de dados");
     }
 
+    public static void retriveMaxDataSize(){
+        System.out.println("Dentro do retriveMaxDataSize do DatabaseLoader");
+    }
 
 }
