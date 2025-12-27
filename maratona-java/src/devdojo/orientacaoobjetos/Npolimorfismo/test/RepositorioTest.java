@@ -6,6 +6,6 @@ import devdojo.orientacaoobjetos.Npolimorfismo.service.RepositorioBancoDeDados;
 public class RepositorioTest {
     public static void main(String[] args) {
         Repositorio repositorio = new RepositorioBancoDeDados();
-        repositorio.salvar();
+        repositorio.salvar(); //Programação orientada a Interfaces
     }
 }
