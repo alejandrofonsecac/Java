@@ -1,10 +1,13 @@
 package testesJava.SistemaDeControleDeVeiculos.dominio;
 
+import devdojo.orientacaoobjetos.Npolimorfismo.dominio.Tomate;
+
 public abstract class Veiculo implements Manutencao {
     protected String nome;
     protected TipoVeiculo tipoVeiculo;
     protected int dataDeFabricacao;
     protected double valor;
+    protected int kilometragem;
 
     public int anoAtual = 2025;
     public int idadeVeiculo;
@@ -18,16 +21,17 @@ public abstract class Veiculo implements Manutencao {
 
     public void exibirDetalhes(Veiculo veiculo){
         System.out.println("Detalhes sobre o veiculo: ");
-        System.out.println(this.getTipoVeiculo());
-        System.out.println("Nome: " + this.getNome());
-        System.out.println("Data de lançamento " + this.getdataDeFabricacao());
-        System.out.println("Valor: " + this.getValor());
+        System.out.println(veiculo.getTipoVeiculo());
+        System.out.println("Nome: " + veiculo.getNome());
+        System.out.println("Data de lançamento " + veiculo.getdataDeFabricacao());
+        System.out.println("Valor: " + veiculo.getValor());
         System.out.println("===================");
+        System.out.println("A idade atual do veiculo é de: " + veiculo.calcularIdade());
     }
 
-    public void calcularIdadeVeiculo(){
-        idadeVeiculo = anoAtual - dataDeFabricacao;
-        System.out.println("Idade do Veiculo: " + this.idadeVeiculo + " anos") ;
+    public int calcularIdade() {
+        int anoAtual = 2025;
+        return anoAtual - dataDeFabricacao;
     }
 
     public String getNome() {
@@ -52,6 +56,10 @@ public abstract class Veiculo implements Manutencao {
 
     public void setdataDeFabricacao(int dataDeFabricacao) {
         this.dataDeFabricacao = dataDeFabricacao;
+    }
+
+    public int getAnoAtual() {
+        return anoAtual;
     }
 
     public double getValor() {
