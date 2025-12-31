@@ -1,7 +1,6 @@
 package testesJava.SistemaDeControleDeVeiculos.dominio;
 
 public class Moto extends Veiculo{
-    double
 
     public Moto(String nome, TipoVeiculo tipoVeiculo, int dataDeFabricacao, double valor) {
         super(nome, tipoVeiculo, dataDeFabricacao, valor);
