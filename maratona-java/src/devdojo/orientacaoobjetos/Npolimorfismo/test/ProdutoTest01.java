@@ -12,7 +12,7 @@ public class ProdutoTest01 {
         Tomate tomate = new Tomate("Tomate Vermelho", 10);
         Televisao televisao = new Televisao("Sansung 75\"", 7000);
 
-        System.out.println("====================");
+        System.out.println("================");
         CalculadoraImposto.calcularImposto(computador);
         System.out.println("====================");
         CalculadoraImposto.calcularImposto(tomate);
