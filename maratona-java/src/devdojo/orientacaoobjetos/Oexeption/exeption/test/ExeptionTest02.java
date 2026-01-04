@@ -17,6 +17,8 @@ public class ExeptionTest02 {
     }
 
     private static void criarNovoArquivo() throws IOException{
+
+        //Teste
         File file = new File("arquivo\\test.txt");
             try{
                 boolean isCriado = file.createNewFile();
