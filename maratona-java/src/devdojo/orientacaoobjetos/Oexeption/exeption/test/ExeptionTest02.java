@@ -3,7 +3,7 @@ package devdojo.orientacaoobjetos.Oexeption.exeption.test;
 import java.io.File;
 import java.io.IOException;
 
-public class ExeptionTest01 {
+public class ExeptionTest02 {
 
     // Exceção Checked => Precisa ser chekada, precisa de tratamento
     // Exceção Unckeded = > Nao precisa ser checkada, RunTimeExeption...
@@ -18,7 +18,13 @@ public class ExeptionTest01 {
 
     private static void criarNovoArquivo() throws IOException{
         File file = new File("arquivo\\test.txt");
-            boolean isCriado = file.createNewFile();
-            System.out.println("Arquivo criado: " + isCriado);
+            try{
+                boolean isCriado = file.createNewFile();
+                System.out.println("Arquivo criado: " + isCriado);
+            } catch (IOException e){
+                e.printStackTrace();
+                //throw e; // Aqui eestamos reelançando a exceção, para caso ela for tratada ela ser relançada
+                throw new RuntimeException("Problema na hora de criar o arquivo");
+            }
     }
 }
