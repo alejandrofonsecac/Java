@@ -25,8 +25,7 @@ public class ExeptionTest02 {
                 System.out.println("Arquivo criado: " + isCriado);
             } catch (IOException e){
                 e.printStackTrace();
-                //throw e; // Aqui eestamos reelançando a exceção, para caso ela for tratada ela ser relançada
-                throw new RuntimeException("Problema na hora de criar o arquivo");
+                throw e; // Aqui eestamos reelançando a exceção, para caso ela for tratada ela ser relançada
             }
     }
 }
