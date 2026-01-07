@@ -25,10 +25,8 @@ public class RunTimeExeptionTest04 {
 
          try {
              talvezLanceException();
-         } catch (SQLException e){
-
-         }catch (FileNotFoundException e){
-
+         } catch (SQLException | FileNotFoundException throwables){
+             throwables.printStackTrace();
          }
     }
 
