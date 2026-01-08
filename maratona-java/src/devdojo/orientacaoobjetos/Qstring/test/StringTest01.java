@@ -3,7 +3,10 @@ package devdojo.orientacaoobjetos.Qstring.test;
 public class StringTest01 {
     public static void main(String[] args) {
 
+        //{1}
         // String são imutaveis
+        // == serem para comparar as referencias das Strings
+        // .equals para comparar o conteudo das Strings
 
         String nome = "Jorge"; // String constant pool
         String nome2 = "Jorge";
