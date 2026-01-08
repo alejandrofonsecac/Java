@@ -22,7 +22,7 @@ public class WrapperTest01 {
 
         int i = intW; // unboxing (tranformar Wrapper para tipo primitivo)
         Integer intW2 = Integer.parseInt("1");  // Tranformar string em int => Interger
-        boolean verdadeiro = Boolean.parseBoolean("True");
+        boolean verdadeiro = Boolean.parseBoolean("true");
         System.out.println(verdadeiro);
 
         System.out.println("--- Testes com o Character ---");
