@@ -8,6 +8,9 @@ public class StringTest01 {
         // == serem para comparar as referencias das Strings
         // .equals para comparar o conteudo das Strings
 
+        //StringPool e um espaço em memoria para alocar Strings, Strings normaiis quando mudadas criam outra String na StringPool, por isso são Imutaveis.
+        //PARA MELHOR DESEMPENHO COM STRINGS VEJA --StringBuilderTest01--
+
         String nome = "Jorge"; // String constant pool
         String nome2 = "Jorge";
 
