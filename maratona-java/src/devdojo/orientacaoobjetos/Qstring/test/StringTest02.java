@@ -13,7 +13,7 @@ public class StringTest02 {
         System.out.println(nome.trim()); // Tira os espaços da String
         System.out.println("------");
         System.out.println(numeros.length());
-        System.out.println(numeros.substring(0, 2)); // Retorna os itens da posição 0 até a 2
+        System.out.println(numeros.substring(0, 4)); // Retorna os itens da posição 0 até a 4
         System.out.println(numeros.substring(3, numeros.length())); // Podemos colocar apenas o 3 que o Java entende que queremos da posição 3 até o final
 
     }
