@@ -1,4 +1,4 @@
-package devdojo.orientacaoobjetos.jModificadorFinal.dominio;
+package devdojo.orientacaoobjetos.JModificadorFinal.dominio;
 
 public class Carro { //Podemoos usar FINAL para nao permitir extensoes de classe
     private String nome;

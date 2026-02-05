@@ -1,4 +1,4 @@
-package devdojo.orientacaoobjetos.jModificadorFinal.dominio;
+package devdojo.orientacaoobjetos.JModificadorFinal.dominio;
 
 public class Comprador {
     private  String nome;

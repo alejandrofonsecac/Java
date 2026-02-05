@@ -1,8 +1,8 @@
-package devdojo.orientacaoobjetos.jModificadorFinal.test;
+package devdojo.orientacaoobjetos.JModificadorFinal.test;
 
-import devdojo.orientacaoobjetos.jModificadorFinal.dominio.Carro;
-import devdojo.orientacaoobjetos.jModificadorFinal.dominio.Comprador;
-import devdojo.orientacaoobjetos.jModificadorFinal.dominio.Ferrari;
+import devdojo.orientacaoobjetos.JModificadorFinal.dominio.Carro;
+import devdojo.orientacaoobjetos.JModificadorFinal.dominio.Comprador;
+import devdojo.orientacaoobjetos.JModificadorFinal.dominio.Ferrari;
 
 public class CarroTest01 {
     public static void main(String[] args) {
