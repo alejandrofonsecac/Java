@@ -1,0 +1,25 @@
+package devdojo.orientacaoobjetos.ClassesUtilitarias.Dates.test;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.temporal.ChronoField;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
+
+public class TemporalAdjustersTest01 {
+    public static void main(String[] args) {
+        LocalDate now = LocalDate.now();
+        now = now.plusDays(20);
+        now = now.with(ChronoField.DAY_OF_MONTH, 18); // O with, ele não adiciona 2 meses, ele faz se tornar 2 meses
+        System.out.println(now);
+        System.out.println(now.getDayOfWeek());
+
+        now = LocalDate.now().with(TemporalAdjusters.nextOrSame(DayOfWeek.SATURDAY));
+        System.out.println(now);
+        System.out.println(now.getDayOfWeek());
+
+        now = LocalDate.now().with(TemporalAdjusters.previousOrSame(DayOfWeek.THURSDAY));
+        System.out.println(now);
+        System.out.println(now.getDayOfWeek());
+    }
+}
