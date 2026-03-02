@@ -35,6 +35,14 @@ public class SmartPhone {
         return serialNumber == null ? 0 : this.serialNumber.hashCode();
     }
 
+    @Override
+    public String toString() {
+        return "SmartPhone{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", marca='" + marca + '\'' +
+                '}';
+    }
+
     public String getSerialNumber() {
         return serialNumber;
     }
