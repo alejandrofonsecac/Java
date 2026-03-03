@@ -2,6 +2,8 @@ package devdojo.orientacaoobjetos.Rcolecoes.dominio;
 
 import java.util.Objects;
 
+import static java.lang.Long.compare;
+
 public class Manga implements  Comparable<Manga>{
     private Long id;
     private String nome;
@@ -62,6 +64,17 @@ public class Manga implements  Comparable<Manga>{
 
     @Override
     public int compareTo(Manga outroManga) {
-        return this.id.compareTo(outroManga.getId());
+        int resultado = compare(this.id, outroManga.id);
+        //Long
+        // resultado < preco -> 1
+        // resltado == preco -> 0
+        // resultado > preco -> -1
+
+        if (resultado != 0){
+            return resultado;
+            //Se o preco for diferente retorna a comparacao de preco, se ele for igual vai para a linha de baixo e compara pelo nome
+        }
+
+        return this.nome.compareTo(outroManga.getNome());
     }
 }
