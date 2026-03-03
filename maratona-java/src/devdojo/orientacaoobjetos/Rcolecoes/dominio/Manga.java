@@ -2,7 +2,7 @@ package devdojo.orientacaoobjetos.Rcolecoes.dominio;
 
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements  Comparable<Manga>{
     private Long id;
     private String nome;
     private double preco;
@@ -58,5 +58,10 @@ public class Manga {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public int compareTo(Manga outroManga) {
+        return this.id.compareTo(outroManga.getId());
     }
 }
