@@ -1,7 +1,5 @@
 package devdojo.orientacaoobjetos.Qstring.test;
 
-import javafx.beans.binding.StringBinding;
-
 public class StringPerformaceTest01 {
     public static void main(String[] args) {
         long inicio = System.currentTimeMillis();

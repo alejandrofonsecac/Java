@@ -1,6 +1,5 @@
 package devdojo.orientacaoobjetos.ClassesUtilitarias.Formatacao.test;
 
-import sun.util.resources.LocaleData;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

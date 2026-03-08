@@ -1,6 +1,5 @@
 package devdojo.orientacaoobjetos.Rcolecoes.test;
 
-import com.sun.xml.internal.ws.addressing.WsaActionUtil;
 import devdojo.orientacaoobjetos.Rcolecoes.dominio.SmartPhone;
 
 public class equalsTest01 {
