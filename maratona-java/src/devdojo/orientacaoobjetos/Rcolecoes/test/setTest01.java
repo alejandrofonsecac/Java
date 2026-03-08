@@ -11,6 +11,8 @@ public class setTest01 {
     public static void main(String[] args) {
         Set<Manga> mangas = new HashSet<>();
         //Podemos sar LinkedHashSet para aparecer na ordem de incersão poise uma lista ligada
+        // -- Set e um conjnto que não permite elemeentos duplicados.
+        //    e ele não tem indice
         mangas.add(new Manga(1L, "Chainsaw Man", 17.5, 46));
         mangas.add(new Manga(6L, "AOT", 29.8, 0));
         mangas.add(new Manga(3L, "Naruto", 22.5, 105));
