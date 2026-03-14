@@ -14,11 +14,11 @@ public class dataBase {
         static {
 
             //Mangas
-            mangas.add(new Manga("Berserk", 59.4, Categorias.SEINEN));
-            mangas.add(new Manga("Chainsaw Man", 26.7, Categorias.SEINEN));
-            mangas.add(new Manga("Horimiya", 31.5, Categorias.ROMANCE));
-            mangas.add(new Manga("Haikyu!!", 29.5, Categorias.ESPORTE));
-            mangas.add(new Manga("Naruto", 29.2, Categorias.SHOUNEN));
+            mangas.add(new Manga(123_435L,"Berserk", 59.4, Categorias.SEINEN));
+            mangas.add(new Manga(654_321L,"Chainsaw Man", 26.7, Categorias.SEINEN));
+            mangas.add(new Manga(325_234L,"Horimiya", 31.5, Categorias.ROMANCE));
+            mangas.add(new Manga(234L,"Haikyu!!", 29.5, Categorias.ESPORTE));
+            mangas.add(new Manga(32_123L,"Naruto", 29.2, Categorias.SHOUNEN));
 
             //Clientes
             clientes.add(new Cliente("Jorge", 19));
@@ -28,4 +28,7 @@ public class dataBase {
             clientes.add(new Cliente("Maria", 28));
             clientes.add(new Cliente("Fransisco", 18));
         }
+
+        protected String login = "123";
+        protected int senha = 123;
 }

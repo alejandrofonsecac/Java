@@ -1,12 +1,25 @@
 package Biblioteca_Manga.dominio;
 
+import Biblioteca_Manga.dataBase.dataBase;
+
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Manga {
     private Long id;
     private String nome;
     private double preco;
     public Categorias categorias;
 
-    public Manga(String nome, double preco, Categorias categorias) {
+
+    public Manga(String nome, double preco, Categorias categoriaSelecionada) {
+        this.nome = nome;
+        this.preco = preco;
+        this.categorias = categoriaSelecionada;
+    }
+
+    public Manga(Long id, String nome, double preco, Categorias categorias) {
+        this.id = id;
         this.nome = nome;
         this.preco = preco;
         this.categorias = categorias;
@@ -36,5 +49,13 @@ public class Manga {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
