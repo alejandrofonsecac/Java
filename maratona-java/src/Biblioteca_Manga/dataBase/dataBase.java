@@ -4,15 +4,12 @@ import Biblioteca_Manga.dominio.Categorias;
 import Biblioteca_Manga.dominio.Cliente;
 import Biblioteca_Manga.dominio.Manga;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class dataBase {
         public static List<Cliente> clientes = new ArrayList<>();
-        public static List<Manga> mangas = new ArrayList<>();
-        Queue<Cliente> filaClientes = new PriorityQueue<>();
+        public static Set<Manga> mangas = new HashSet<>();
+        public static Queue<Cliente> filaClientes = new PriorityQueue<>();
 
         static {
 

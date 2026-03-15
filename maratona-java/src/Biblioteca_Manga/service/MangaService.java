@@ -51,7 +51,7 @@ public class MangaService {
             int categoria = input.nextInt();
             Categorias categoriaSelecionada = categoriasDisponiveis[categoria - 1];
 
-            long id = gerarId(dataBase.mangas);
+            long id = gerarId((List<Manga>) dataBase.mangas);
 
             dataBase.mangas.add(new Manga(id, nome, preco, categoriaSelecionada));
 

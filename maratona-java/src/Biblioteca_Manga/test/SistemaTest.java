@@ -4,6 +4,8 @@ import Biblioteca_Manga.dataBase.dataBase;
 import Biblioteca_Manga.service.ClienteService;
 import Biblioteca_Manga.service.MangaService;
 
+import Biblioteca_Manga.service.PedidoService;
+
 import java.util.Scanner;
 
 public class SistemaTest {
@@ -33,7 +35,7 @@ public class SistemaTest {
                         ClienteService.fazerPedido(cadastro);
                         break;
                     case 5:
-                        System.out.println("Prcessando pedido...");
+                        PedidoService.processarPedido();
                         break;
                     case 6:
                         isRunning = false;
