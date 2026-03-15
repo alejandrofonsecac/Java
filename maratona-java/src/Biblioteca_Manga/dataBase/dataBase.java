@@ -6,10 +6,13 @@ import Biblioteca_Manga.dominio.Manga;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class dataBase {
         public static List<Cliente> clientes = new ArrayList<>();
-        public static List<Manga> mangas = new ArrayList<Manga>();
+        public static List<Manga> mangas = new ArrayList<>();
+        Queue<Cliente> filaClientes = new PriorityQueue<>();
 
         static {
 

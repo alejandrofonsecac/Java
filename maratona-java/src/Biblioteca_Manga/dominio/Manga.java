@@ -1,10 +1,5 @@
 package Biblioteca_Manga.dominio;
 
-import Biblioteca_Manga.dataBase.dataBase;
-
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
-
 public class Manga {
     private Long id;
     private String nome;
