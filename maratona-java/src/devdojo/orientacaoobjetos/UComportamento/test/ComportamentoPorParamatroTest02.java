@@ -26,11 +26,11 @@ public class ComportamentoPorParamatroTest02 {
 //        System.out.println(cars);
 //
 //        System.out.println("====");
-        cars = filter(cars, (CarPredicate) car -> car.getName().equals("green"));
+        List<Car> greenCars = filter(cars, ( Car car)  -> car.getName().equals("green"));
+        List<Car> yearBeforeCars = filter(cars, (Car car) -> car.getYear() < 2000);
 
-        List<Integer> nums = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
-
-        System.out.println(filter(nums, num -> num % 2 == 0));
+        System.out.println(greenCars);
+        System.out.println(yearBeforeCars);
     }
 
     private static List<Car> filter(List<Car> cars, CarPredicate carPredicate) {
