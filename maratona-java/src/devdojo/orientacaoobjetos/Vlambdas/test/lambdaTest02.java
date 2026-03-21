@@ -12,8 +12,10 @@ public class lambdaTest02 {
         name.add("Subaru");
         name.add("REM");
 
-        List<Integer> integers = map(name, (String s) -> s.length());
+        List<Integer> integers = map(name, String::length);
+        List<String> names = map(name, String::toUpperCase);
         System.out.println(integers);
+        System.out.println(names);
     }
 
     private static <T, R> List<R> map(List<T> list, Function<T, R> function){
