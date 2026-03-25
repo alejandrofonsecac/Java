@@ -20,6 +20,6 @@ public class StreamTest05 {
                 .flatMap(Arrays::stream)
                 .collect(Collectors.toList());
 
-        System.out.println(letters2);
+        System.out.println(letters2 );
     }
 }
