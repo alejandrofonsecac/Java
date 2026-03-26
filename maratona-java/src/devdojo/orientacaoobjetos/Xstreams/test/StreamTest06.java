@@ -20,6 +20,19 @@ public class StreamTest06 {
             new LigthNovel("Naruto", 4.99),
             new LigthNovel("Class Roam of The Elite", 7.99)
     ));
+
+    // STREAMS - FIND E MATCH:
+        //
+        // findFirst() -> retorna o primeiro elemento encontrado (Optional)
+        // findAny()   -> retorna qualquer elemento (melhor para paralelo)
+        //
+        // anyMatch()  -> retorna true se pelo menos UM elemento atender a condição
+        // allMatch()  -> retorna true se TODOS atenderem a condição
+        // noneMatch() -> retorna true se NENHUM atender a condição
+        //
+        // OBS: find retorna Optional, match retorna boolean
+        // OBS: todos usam Predicate (condição -> true/false)
+
     public static void main(String[] args) {
         System.out.println(ligthNovels.stream().anyMatch(ln -> ln.getPrice() > 8));
 
