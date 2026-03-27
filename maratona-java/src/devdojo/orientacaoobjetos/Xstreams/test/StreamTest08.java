@@ -1,6 +1,6 @@
 package devdojo.orientacaoobjetos.Xstreams.test;
 
-import devdojo.orientacaoobjetos.Xstreams.classes.LigthNovel;
+import devdojo.orientacaoobjetos.Xstreams.dominio.LigthNovel;
 
 import java.util.ArrayList;
 import java.util.Arrays;

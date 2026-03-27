@@ -1,12 +1,10 @@
 package devdojo.orientacaoobjetos.Xstreams.test;
 
-import devdojo.orientacaoobjetos.Xstreams.classes.LigthNovel;
+import devdojo.orientacaoobjetos.Xstreams.dominio.LigthNovel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamTest03 {
