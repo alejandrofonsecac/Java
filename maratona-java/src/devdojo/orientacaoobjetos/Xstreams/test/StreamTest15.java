@@ -2,6 +2,7 @@ package devdojo.orientacaoobjetos.Xstreams.test;
 
 import devdojo.orientacaoobjetos.Xstreams.dominio.Category;
 import devdojo.orientacaoobjetos.Xstreams.dominio.LigthNovel;
+import devdojo.orientacaoobjetos.Xstreams.dominio.Promotion;
 
 import java.util.*;
 import java.util.function.BinaryOperator;
@@ -26,5 +27,20 @@ public class StreamTest15 {
                         Collectors.summarizingDouble(LigthNovel::getPrice)));
 
         System.out.println(collect);
+
+        java.util.Map<Category, Set<Promotion>> collect1 = ligthNovels.stream()
+                .collect(Collectors.groupingBy(LigthNovel::getCategory, Collectors.mapping(StreamTest15::getPromotion, Collectors.toSet())));
+
+        System.out.println(collect1);
+
+        Map<Category, Collection<Promotion>> collect2 = ligthNovels.stream()
+                .collect(Collectors.groupingBy(LigthNovel::getCategory, Collectors.mapping(StreamTest15::getPromotion, Collectors.toCollection(LinkedHashSet::new))));
+
+        System.out.println(collect2);
+
+    }
+
+    private static Promotion getPromotion(LigthNovel ln){
+        return ln.getPrice() < 8 ? Promotion.UNDER_PORMOTION: Promotion.NORMAL_PRICE;
     }
 }
