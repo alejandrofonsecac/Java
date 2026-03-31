@@ -5,7 +5,7 @@ import devdojo.orientacaoobjetos.Xstreams.dominio.LigthNovel;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class StreamTest11 {
+public class StreamTest11ToDoble {
 
     private static List<LigthNovel> ligthNovels = new ArrayList<>(Arrays.asList(
             new LigthNovel("Mushoku Tensei", 6.99),

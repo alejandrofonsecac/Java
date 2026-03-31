@@ -3,7 +3,7 @@ package devdojo.orientacaoobjetos.Xstreams.test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StreamTest07 {
+public class StreamTest07reduce {
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
         numbers.add(1);
