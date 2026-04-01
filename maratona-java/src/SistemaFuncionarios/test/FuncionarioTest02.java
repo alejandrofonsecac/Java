@@ -6,6 +6,7 @@ import SistemaFuncionarios.repository.FuncionarioRepository;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FuncionarioTest02 {
     public static void main(String[] args) {
@@ -38,5 +39,21 @@ public class FuncionarioTest02 {
         System.out.println(collect1);
 
         collect1.forEach(((cargos, total) -> System.out.println(cargos + " -> " + total)));
+
+        System.out.println();
+
+        System.out.println("=== FLAPMAP ===");
+
+        funcionarios.stream()
+                .flatMap(funcionario -> funcionario.getHabilidades().stream())
+                .distinct()
+                .forEach(System.out::println);
+
+        System.out.println();
+
+        funcionarios.stream()
+                .flatMap(funcionario -> funcionario.getHabilidades().stream()
+                        .map(habilidades -> funcionario.getNome() + " - " + habilidades)).
+                forEach(System.out::println);
     }
 }

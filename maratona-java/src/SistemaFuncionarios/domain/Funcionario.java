@@ -1,5 +1,6 @@
 package SistemaFuncionarios.domain;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Funcionario {
@@ -7,12 +8,21 @@ public class Funcionario {
     private int idade;
     private double salario;
     private Cargos cargos;
+    private List<Habilidades> habilidades;
 
     public Funcionario(String nome, int idade, double salario, Cargos cargos) {
         this.nome = nome;
         this.idade = idade;
         this.salario = salario;
         this.cargos = cargos;
+    }
+
+    public Funcionario(String nome, int idade, double salario, Cargos cargos, List<Habilidades> habilidades) {
+        this.nome = nome;
+        this.habilidades = habilidades;
+        this.cargos = cargos;
+        this.salario = salario;
+        this.idade = idade;
     }
 
     @Override
@@ -34,6 +44,7 @@ public class Funcionario {
                 ", idade=" + idade +
                 ", salario=" + salario +
                 ", cargos=" + cargos +
+                ", habilidades=" + habilidades +
                 '}';
     }
 
@@ -47,10 +58,6 @@ public class Funcionario {
 
     public Cargos getCargos() {
         return cargos;
-    }
-
-    public void setCargos(Cargos cargos) {
-        this.cargos = cargos;
     }
 
     public double getSalario() {
@@ -68,4 +75,6 @@ public class Funcionario {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+
+    public List<Habilidades> getHabilidades() { return habilidades; }
 }
