@@ -1,0 +1,26 @@
+package java.orientacaoobjetos.Hheranca.test;
+
+import java.orientacaoobjetos.Hheranca.dominio.Endereco;
+import java.orientacaoobjetos.Hheranca.dominio.Pessoa;
+import java.orientacaoobjetos.Hheranca.dominio.Funcionario;
+
+public class HerancaTest01 {
+    public static void main(String[] args) {
+        Endereco endereco = new Endereco();
+        endereco.setRua("Rua Curitiba");
+        endereco.setCep("12345");
+
+        Pessoa pessoa = new Pessoa("Fransisco");
+        pessoa.setEndereco(endereco);
+        pessoa.setCpf("1111111111");
+        pessoa.imprime();
+
+
+        System.out.println("--- Funcionario ---");
+        Funcionario funcionario = new Funcionario("Funcionario Arthur");
+        funcionario.setEndereco(endereco);
+        funcionario.setCpf("22222222222");
+        funcionario.setSalario(2334.21);
+        funcionario.imprime();
+    }
+}

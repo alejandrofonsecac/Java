@@ -1,7 +1,5 @@
 package testesJava.SistemaDeControleDeVeiculos.dominio;
 
-import devdojo.orientacaoobjetos.Npolimorfismo.dominio.Tomate;
-
 public abstract class Veiculo implements Manutencao {
     protected String nome;
     protected TipoVeiculo tipoVeiculo;
