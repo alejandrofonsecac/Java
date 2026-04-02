@@ -51,9 +51,11 @@ public class FuncionarioTest02 {
 
         System.out.println();
 
-        funcionarios.stream()
+        long count = funcionarios.stream()
                 .flatMap(funcionario -> funcionario.getHabilidades().stream()
                         .map(habilidades -> funcionario.getNome() + " - " + habilidades)).
-                forEach(System.out::println);
+                count();
+
+        System.out.println(count);
     }
 }
