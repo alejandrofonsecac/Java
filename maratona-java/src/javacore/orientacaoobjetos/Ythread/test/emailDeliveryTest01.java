@@ -1,7 +1,7 @@
-package javacore.orientacaoobjetos.Zthread.test;
+package javacore.orientacaoobjetos.Ythread.test;
 
-import javacore.orientacaoobjetos.Zthread.domain.Members;
-import javacore.orientacaoobjetos.Zthread.service.emailDeliveryService;
+import javacore.orientacaoobjetos.Ythread.domain.Members;
+import javacore.orientacaoobjetos.Ythread.service.emailDeliveryService;
 
 import javax.swing.*;
 

@@ -1,4 +1,4 @@
-package javacore.orientacaoobjetos.Zthread.test;
+package javacore.orientacaoobjetos.Ythread.test;
 
 public class ThreadTest01 {
 

@@ -1,4 +1,4 @@
-package javacore.orientacaoobjetos.Zthread.domain;
+package javacore.orientacaoobjetos.Ythread.domain;
 
 public class Accont {
     private int balance = 50;

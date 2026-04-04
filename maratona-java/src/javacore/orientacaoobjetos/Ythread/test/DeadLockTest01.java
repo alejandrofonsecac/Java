@@ -1,4 +1,4 @@
-package javacore.orientacaoobjetos.Zthread.test;
+package javacore.orientacaoobjetos.Ythread.test;
 
 public class DeadLockTest01 {
     public static void main(String[] args) {

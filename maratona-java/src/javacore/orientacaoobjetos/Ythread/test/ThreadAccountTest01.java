@@ -1,6 +1,6 @@
-package javacore.orientacaoobjetos.Zthread.test;
+package javacore.orientacaoobjetos.Ythread.test;
 
-import javacore.orientacaoobjetos.Zthread.domain.Accont;
+import javacore.orientacaoobjetos.Ythread.domain.Accont;
 
 public class ThreadAccountTest01 implements Runnable {
     private final Accont accont = new Accont();

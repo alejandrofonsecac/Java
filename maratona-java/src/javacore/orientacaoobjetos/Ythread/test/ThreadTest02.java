@@ -1,4 +1,4 @@
-package javacore.orientacaoobjetos.Zthread.test;
+package javacore.orientacaoobjetos.Ythread.test;
 
 class ThreadExampleRunnable2 implements Runnable {
     private final String c;

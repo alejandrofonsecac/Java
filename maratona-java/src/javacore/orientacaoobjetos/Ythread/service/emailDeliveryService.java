@@ -1,6 +1,6 @@
-package javacore.orientacaoobjetos.Zthread.service;
+package javacore.orientacaoobjetos.Ythread.service;
 
-import javacore.orientacaoobjetos.Zthread.domain.Members;
+import javacore.orientacaoobjetos.Ythread.domain.Members;
 
 public class emailDeliveryService implements Runnable{
     private final Members members;

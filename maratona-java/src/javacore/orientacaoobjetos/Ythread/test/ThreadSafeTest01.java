@@ -1,7 +1,6 @@
-package javacore.orientacaoobjetos.Zthread.test;
+package javacore.orientacaoobjetos.Ythread.test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 class ThreadSafeNames{

@@ -1,4 +1,4 @@
-package javacore.orientacaoobjetos.Zthread.domain;
+package javacore.orientacaoobjetos.Ythread.domain;
 
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
