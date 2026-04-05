@@ -1,5 +1,6 @@
 package javacore.orientacaoobjetos.Zconcorrencia.test;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -14,13 +15,15 @@ class Worker implements Runnable{
 
     @Override
     public void run() {
-        lock.lock();
+        //isHeldByCurrentThreadv -> verifica se o lock atual é detido pela thread que está executando o método naquele exato momento
 
         try {
+            lock.tryLock(2, TimeUnit.SECONDS);
             if (lock.isHeldByCurrentThread()){
-                System.out.printf("Thread %s entrou em uma sessão crítica%n", name);
+                System.out.printf("Thread %s pegou o LOCK%n", name);
             }
 
+            System.out.printf("Thread %s entrou em sessão critica%n", name);
             System.out.printf("%d Threads esperando na fila%n", lock.getQueueLength());
             System.out.printf("Thread %s vai esperar 2s%n", name);
             Thread.sleep(2000);
@@ -29,7 +32,9 @@ class Worker implements Runnable{
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
-            lock.unlock();
+            if (lock.isHeldByCurrentThread()){
+                lock.unlock();
+            }
         }
     }
 }
