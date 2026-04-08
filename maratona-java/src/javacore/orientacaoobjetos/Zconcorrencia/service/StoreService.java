@@ -12,24 +12,42 @@ public class StoreService {
         return ThreadLocalRandom.current().nextInt(1, 500) * 10;
     }
 
+    public static void shutdown(){
+        ex.shutdown();
+    }
+
     public double getPriceSync(String storeName){
-        System.out.printf("Getting prices sync for store%s%n", storeName);
+        System.out.printf("Getting prices sync for store %s%n", storeName);
         return priceGenerator();
     }
 
-    public Future<Double> getPricecsAsync(String storeName){
+    public Future<Double> getPricecsAsyncFuture(String storeName){
         System.out.printf("Getting prices sync for store%s%n", storeName);
-        Future<Double> submit = ex.submit(this::priceGenerator);
-        ex.shutdown();
-        return submit;
+        return ex.submit(this::priceGenerator);
     }
 
-    private static void searchPricesSyncFuture(StoreService storeService) throws ExecutionException, InterruptedException {
+    public CompletableFuture<Double> getPricecsAsyncCompletableFuture(String storeName){
+        System.out.printf("Getting prices sync for store%s%n", storeName);
+        return CompletableFuture.supplyAsync(this::priceGenerator);
+    }
+
+    private static void getPricesSyncFuture(StoreService storeService) throws ExecutionException, InterruptedException {
         long start = System.currentTimeMillis();
-        storeService.getPricecsAsync("Store1").get();
-        storeService.getPricecsAsync("Store2").get();
-        storeService.getPricecsAsync("Store3").get();
-        storeService.getPricecsAsync("Store4").get();
+        storeService.getPricecsAsyncFuture("Store1").get();
+        storeService.getPricecsAsyncFuture("Store2").get();
+        storeService.getPricecsAsyncFuture("Store3").get();
+        storeService.getPricecsAsyncFuture("Store4").get();
+
+        long end = System.currentTimeMillis();
+        System.out.printf("Time passed to searchPricesSync %d%n", (end-start));
+    }
+
+    private static void getPricesSyncCompletableFuture(StoreService storeService) throws ExecutionException, InterruptedException {
+        long start = System.currentTimeMillis();
+        storeService.getPricecsAsyncCompletableFuture("Store1").get();
+        storeService.getPricecsAsyncCompletableFuture("Store2").get();
+        storeService.getPricecsAsyncCompletableFuture("Store3").get();
+        storeService.getPricecsAsyncCompletableFuture("Store4").get();
 
         long end = System.currentTimeMillis();
         System.out.printf("Time passed to searchPricesSync %d%n", (end-start));
