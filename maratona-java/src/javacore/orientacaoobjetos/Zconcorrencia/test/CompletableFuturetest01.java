@@ -36,12 +36,12 @@ public class CompletableFuturetest01 {
         System.out.printf("Time passed to searchPricesSync %d%n", (end-start));
     }
 
-    private static void searchPricesSyncCompletableFuture(StoreService storeService) throws ExecutionException, InterruptedException {
+    private static void searchPricesSyncCompletableFuture(StoreService storeService){
         long start = System.currentTimeMillis();
-        System.out.println(storeService.getPricecsAsyncCompletableFuture("Store1").get());
-        System.out.println(storeService.getPricecsAsyncCompletableFuture("Store2").get());
-        System.out.println(storeService.getPricecsAsyncCompletableFuture("Store3").get());
-        System.out.println(storeService.getPricecsAsyncCompletableFuture("Store4").get());
+        System.out.println(storeService.getPricecsAsyncCompletableFuture("Store1").join());
+        System.out.println(storeService.getPricecsAsyncCompletableFuture("Store2").join());
+        System.out.println(storeService.getPricecsAsyncCompletableFuture("Store3").join());
+        System.out.println(storeService.getPricecsAsyncCompletableFuture("Store4").join());
 
         long end = System.currentTimeMillis();
         System.out.printf("Time passed to searchPricesSync %d%n", (end-start));
