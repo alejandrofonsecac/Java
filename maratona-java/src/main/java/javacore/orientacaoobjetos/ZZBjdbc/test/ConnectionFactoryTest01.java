@@ -2,42 +2,29 @@ package javacore.orientacaoobjetos.ZZBjdbc.test;
 
 import javacore.orientacaoobjetos.ZZBjdbc.dominio.Producer;
 import javacore.orientacaoobjetos.ZZBjdbc.repository.ProducerRepository;
+import javacore.orientacaoobjetos.ZZBjdbc.service.ProducerService;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 public class ConnectionFactoryTest01 {
     public static void main(String[] args) {
 
-        Producer producer = Producer.builder()
-                .id(1)
-                .name("Ayanokoji")
-                .build();
-        ProducerRepository.update(producer);
+        //Criando um novo valor na tabela
+        Producer producer = Producer.builder().name("Test").build();
+//        ProducerService.save(producer);
+        ProducerService.delete(15);
+        ProducerService.delete(16);
+        ProducerService.delete(17);
+
+//        //Autalizando um valor
+//        Producer producer = Producer.builder().id(1).name("Ayanokoji").build();
+
 
 //        log.info("INFO");
 //        log.debug("debug");
 //        log.warn("warn");
 //        log.error("error");
 //        log.trace("trace");
-
-
-
-        // --- Adicionar novas linhas ---
-//        Producer producer1 = Producer.builder()
-//                .name("Chainsaw Man")
-//                .build();
-//        ProducerRepository.save(producer1);
-//
-//        Producer producer2 = Producer.builder()
-//                .name("AOT")
-//                .build();
-//        ProducerRepository.save(producer2);
-//
-//        Producer producer3 = Producer.builder()
-//                .name("Mushoku tensei")
-//                .build();
-//        ProducerRepository.save(producer3);
-
 
         //Tambem alem dessa forma podemos adicionar direto no SQL assim:
         //INSERT INTO anime_store.producer (name) VALUES ('Bleach');
