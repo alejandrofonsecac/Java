@@ -2,7 +2,9 @@ package javacore.orientacaoobjetos.ZZBjdbc.test;
 
 import javacore.orientacaoobjetos.ZZBjdbc.dominio.Producer;
 import javacore.orientacaoobjetos.ZZBjdbc.repository.ProducerRepository;
+import lombok.extern.log4j.Log4j2;
 
+@Log4j2
 public class ConnectionFactoryTest01 {
     public static void main(String[] args) {
 
@@ -10,8 +12,14 @@ public class ConnectionFactoryTest01 {
                 .id(1)
                 .name("Ayanokoji")
                 .build();
-
         ProducerRepository.update(producer);
+
+//        log.info("INFO");
+//        log.debug("debug");
+//        log.warn("warn");
+//        log.error("error");
+//        log.trace("trace");
+
 
 
         // --- Adicionar novas linhas ---
