@@ -1,7 +1,6 @@
 package javacore.orientacaoobjetos.ZZBjdbc.test;
 
 import javacore.orientacaoobjetos.ZZBjdbc.dominio.Producer;
-import javacore.orientacaoobjetos.ZZBjdbc.repository.ProducerRepository;
 import javacore.orientacaoobjetos.ZZBjdbc.service.ProducerService;
 import lombok.extern.log4j.Log4j2;
 
@@ -11,10 +10,12 @@ public class ConnectionFactoryTest01 {
 
         //Criando um novo valor na tabela
         Producer producer = Producer.builder().name("Test").build();
+        Producer producerToUpdate = Producer.builder().id(1).name("Studio Bind").build();
+
+        ProducerService.update(producerToUpdate);
+
 //        ProducerService.save(producer);
-        ProducerService.delete(15);
-        ProducerService.delete(16);
-        ProducerService.delete(17);
+//        ProducerService.delete(15);
 
 //        //Autalizando um valor
 //        Producer producer = Producer.builder().id(1).name("Ayanokoji").build();

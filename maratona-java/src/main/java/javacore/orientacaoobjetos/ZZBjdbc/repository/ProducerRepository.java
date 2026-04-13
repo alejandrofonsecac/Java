@@ -23,9 +23,9 @@ public class ProducerRepository {
             ps.setString(1, producer.getName());
             ps.setInt(2, producer.getId());
             int rowsAffected = ps.executeUpdate();
-            log.info("Data Base rows affected {}", rowsAffected);
+            log.info("Update producer '{}', rows affected {}", producer.getId(), rowsAffected);
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error("Error while trying to update producer '{}'", producer.getId(), e);
         }
     }
 
