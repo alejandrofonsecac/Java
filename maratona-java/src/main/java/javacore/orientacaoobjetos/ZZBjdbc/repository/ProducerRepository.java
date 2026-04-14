@@ -6,7 +6,10 @@ import lombok.extern.log4j.Log4j2;
 
 import java.sql.PreparedStatement;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Log4j2
 public class ProducerRepository {
@@ -48,12 +51,35 @@ public class ProducerRepository {
     public static void delete(int id) {
         String sql = "DELETE FROM anime_store.producer WHERE id = ?";
         try (Connection conn = ConnectionFactory.getConnection();
-             PreparedStatement ps = conn.prepareStatement(sql)) {
+             PreparedStatement ps = conn.prepareStatement(sql)){
+
             ps.setInt(1, id);
             int rowsAffected = ps.executeUpdate();
-            log.info("Deleted producer '{}' from the data base, rows affected {}", id, rowsAffected);
+
         } catch (SQLException e) {
             log.error("Error while trying to delete producer '{}'", id, e);
         }
+    }
+
+    public static List<Producer> findAll() {
+        log.info("Finding all Producers");
+        String sql = "SELECT id, name FROM anime_store.producer";
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery(sql)) {
+            while (rs.next()){
+                Producer producer = Producer
+                        .builder()
+                        .id(rs.getInt("id"))
+                        .name(rs.getString("name"))
+                        .build();
+                producers.add(producer);
+            }
+
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+        }
+        return producers;
     }
 }

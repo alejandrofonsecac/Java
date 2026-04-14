@@ -1,8 +1,11 @@
 package javacore.orientacaoobjetos.ZZBjdbc.test;
 
 import javacore.orientacaoobjetos.ZZBjdbc.dominio.Producer;
+import javacore.orientacaoobjetos.ZZBjdbc.repository.ProducerRepository;
 import javacore.orientacaoobjetos.ZZBjdbc.service.ProducerService;
 import lombok.extern.log4j.Log4j2;
+
+import java.util.List;
 
 @Log4j2
 public class ConnectionFactoryTest01 {
@@ -12,7 +15,10 @@ public class ConnectionFactoryTest01 {
         Producer producer = Producer.builder().name("Test").build();
         Producer producerToUpdate = Producer.builder().id(1).name("Studio Bind").build();
 
-        ProducerService.update(producerToUpdate);
+        List<Producer> producers = ProducerRepository.findAll();
+        log.info("Producers found '{}'", producers);
+
+//        ProducerService.update(producerToUpdate);
 
 //        ProducerService.save(producer);
 //        ProducerService.delete(15);
