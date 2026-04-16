@@ -18,13 +18,20 @@ public class ConnectionFactoryTest01 {
 //        List<Producer> producers = ProducerRepository.findAll();
 //        log.info("Producers found '{}'", producers);
 
-        List<Producer> producers = ProducerRepository.findByName("Studio Mappa");
-        log.info("Producters found '{}'", producers);
+//        List<Producer> producers = ProducerRepository.findByName("Studio Mappa");
+//        log.info("Producters found '{}'", producers);
+//        ProducerService.showProducerMetaData();
+
+        ProducerService.showDriverMetaData();
 
 //        ProducerService.update(producerToUpdate);
 
 //        ProducerService.save(producer);
 //        ProducerService.delete(15);
+
+
+
+        // =============================================
 
 //        //Autalizando um valor
 //        Producer producer = Producer.builder().id(1).name("Ayanokoji").build();
