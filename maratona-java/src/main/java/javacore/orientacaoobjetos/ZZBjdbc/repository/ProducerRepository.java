@@ -40,7 +40,6 @@ public class ProducerRepository {
              PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, producer.getName());
             int rowsAffected = ps.executeUpdate();
-            ps.setString(1, producer.getName());
             log.info("Inserted producer '{}' in the data base, rows affected {}", producer.getName(), rowsAffected);
         } catch (SQLException e) {
             log.error("Error while trying to insert producer '{}'", producer.getName(), e);
@@ -68,6 +67,35 @@ public class ProducerRepository {
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery(sql)) {
+            while (rs.next()){
+                Producer producer = Producer
+                        .builder()
+                        .id(rs.getInt("id"))
+                        .name(rs.getString("name"))
+                        .build();
+                producers.add(producer);
+            }
+
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+        }
+        return producers;
+    }
+
+    //% significa:
+    //Ex:
+    //%naruto% → contém "naruto"
+    //naruto% → começa com
+    //%naruto → termina com
+
+    public static List<Producer> findByName(String name) {
+        log.info("Finding all Producers names");
+        String sql = "SELECT * FROM anime_store.producer where name like ?";
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)){
+             ps.setString(1, "% " + name + " %");
+             ResultSet rs = ps.executeQuery();
             while (rs.next()){
                 Producer producer = Producer
                         .builder()

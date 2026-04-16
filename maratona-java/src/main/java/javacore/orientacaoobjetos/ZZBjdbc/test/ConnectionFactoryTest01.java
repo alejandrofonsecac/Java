@@ -15,8 +15,11 @@ public class ConnectionFactoryTest01 {
         Producer producer = Producer.builder().name("Test").build();
         Producer producerToUpdate = Producer.builder().id(1).name("Studio Bind").build();
 
-        List<Producer> producers = ProducerRepository.findAll();
-        log.info("Producers found '{}'", producers);
+//        List<Producer> producers = ProducerRepository.findAll();
+//        log.info("Producers found '{}'", producers);
+
+        List<Producer> producers = ProducerRepository.findByName("Studio Mappa");
+        log.info("Producters found '{}'", producers);
 
 //        ProducerService.update(producerToUpdate);
 

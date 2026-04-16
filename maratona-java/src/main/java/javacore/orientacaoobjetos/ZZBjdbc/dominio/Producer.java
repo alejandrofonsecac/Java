@@ -10,6 +10,4 @@ import java.util.Objects;
 public final class Producer {
     private final Integer id;
     private final String name;
-
-
 }
