@@ -15,6 +15,10 @@ public class ConnectionFactoryTest01 {
         Producer producer = Producer.builder().name("Test").build();
         Producer producerToUpdate = Producer.builder().id(1).name("Studio Bind").build();
 
+//        ProducerService.update(producerToUpdate);
+//        ProducerService.save(producer);
+//        ProducerService.delete(15);
+
 //        List<Producer> producers = ProducerRepository.findAll();
 //        log.info("Producers found '{}'", producers);
 
@@ -22,12 +26,16 @@ public class ConnectionFactoryTest01 {
 //        log.info("Producters found '{}'", producers);
 //        ProducerService.showProducerMetaData();
 
-        ProducerService.showDriverMetaData();
+//        ProducerService.showDriverMetaData();
+//        ProducerService.showTypeScrollWorking();
 
-//        ProducerService.update(producerToUpdate);
+//        List<Producer> producers = ProducerService.findByNameAndUpdateToUpperCase("Mappa");
+//        log.info("Producters found '{}'", producers);
 
-//        ProducerService.save(producer);
-//        ProducerService.delete(15);
+//        List<Producer> producers = ProducerService.findByNameAndInsertWhenNotFound("Subaru");
+//        log.info("Producters found '{}'", producers);
+
+        ProducerService.findByNameAndDelete("Subaru");
 
 
 
