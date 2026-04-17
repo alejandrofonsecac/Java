@@ -36,6 +36,10 @@ public class ProducerService {
         ProducerRepository.showDriverMetaData();
     }
 
+    public static void showTypeScrollWorking(){
+        ProducerRepository.showTypeScrollWorking();
+    }
+
     public static void requiredValidId(Integer id){
         if (id == null || id <= 0){
             throw new IllegalArgumentException("Invalid Id");
