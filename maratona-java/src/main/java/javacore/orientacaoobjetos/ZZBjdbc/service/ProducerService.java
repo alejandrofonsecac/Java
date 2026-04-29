@@ -56,7 +56,9 @@ public class ProducerService {
         return ProducerRepository.findByNamePreparedStatement(name);
     }
 
-
+    public static List<Producer> findByNameCallableStatement(String name){
+        return ProducerRepository.FindByNameCallableStatement(name);
+    }
 
     public static void requiredValidId(Integer id){
         if (id == null || id <= 0){
