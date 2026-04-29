@@ -2,6 +2,7 @@ package javacore.orientacaoobjetos.ZZBjdbc.repository;
 
 import javacore.orientacaoobjetos.ZZBjdbc.conn.ConnectionFactory;
 import javacore.orientacaoobjetos.ZZBjdbc.dominio.Producer;
+import javacore.orientacaoobjetos.ZZBjdbc.listener.CustomRowSetListener;
 
 import javax.sql.rowset.JdbcRowSet;
 import java.sql.SQLException;
@@ -14,6 +15,7 @@ public class ProducerRepositoryRowSet {
         List<Producer> producers = new ArrayList<>();
 
         try(JdbcRowSet jrs = ConnectionFactory.getJdbcRowSet()){
+            jrs.addRowSetListener(new CustomRowSetListener());
             jrs.setCommand(sql);
             jrs.setString(1, String.format("%%%s%%", name));
             jrs.execute();
@@ -29,5 +31,24 @@ public class ProducerRepositoryRowSet {
             throw new RuntimeException(e);
         }
         return producers;
+    }
+
+    public static void updateJdbcRowSet(Producer producer){
+        String sql = "SELECT * FROM anime_store.producer WHERE id = ?";
+
+        try(JdbcRowSet jrs = ConnectionFactory.getJdbcRowSet()){
+            jrs.addRowSetListener(new CustomRowSetListener());
+            jrs.setCommand(sql);
+            jrs.setInt(1, producer.getId());
+            jrs.execute();
+
+            if (!jrs.next()) return;
+
+            jrs.updateString("name", producer.getName());
+            jrs.updateRow();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
