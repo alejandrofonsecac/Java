@@ -15,6 +15,13 @@ public class ProducerRepository {
     //UPDATE    ->	altera linha existente
     //WHERE id  ->	define qual linha alterar
 
+
+    //% significa:
+    //Ex:
+    //%naruto% → contém "naruto"
+    //naruto% → começa com
+    //%naruto → termina com
+
     public static void update(Producer producer) {
         String sql = "UPDATE anime_store.producer SET name = ? WHERE id = ?";
 
@@ -79,11 +86,7 @@ public class ProducerRepository {
         return producers;
     }
 
-    //% significa:
-    //Ex:
-    //%naruto% → contém "naruto"
-    //naruto% → começa com
-    //%naruto → termina com
+
 
     public static List<Producer> findByName(String name) {
         log.info("Finding all Producers names");
@@ -303,5 +306,34 @@ public class ProducerRepository {
         } catch (SQLException e) {
             log.error("Error while trying to find all producers", e);
         }
+    }
+
+    public static List<Producer> findByNamePreparedStatement(String name) {
+        log.info("Finding all Producers names");
+        String sql = "SELECT * FROM anime_store.producer where name like ?";
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = createdPreparedStatement(conn, sql, name);
+             ResultSet rs = ps.executeQuery()){
+
+            while (rs.next()) {
+                Producer producer = Producer
+                        .builder()
+                        .id(rs.getInt("id"))
+                        .name(rs.getString("name"))
+                        .build();
+                producers.add(producer);
+            }
+
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+        }
+        return producers;
+    }
+
+    private static PreparedStatement createdPreparedStatement(Connection connection, String sql, String name) throws SQLException {
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, "%" + name + "%");
+        return ps;
     }
 }

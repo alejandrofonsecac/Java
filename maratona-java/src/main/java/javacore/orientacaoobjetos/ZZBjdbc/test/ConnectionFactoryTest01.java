@@ -13,6 +13,7 @@ public class ConnectionFactoryTest01 {
 
         //Criando um novo valor na tabela
         Producer producer = Producer.builder().name("Test").build();
+
         Producer producerToUpdate = Producer.builder().id(1).name("Studio Bind").build();
 
 //        ProducerService.update(producerToUpdate);
@@ -35,7 +36,12 @@ public class ConnectionFactoryTest01 {
 //        List<Producer> producers = ProducerService.findByNameAndInsertWhenNotFound("Subaru");
 //        log.info("Producters found '{}'", producers);
 
-        ProducerService.findByNameAndDelete("Subaru");
+//        ProducerService.findByNameAndDelete("Subaru");
+
+        List<Producer> producers = ProducerService.findByNamePreparedStatement("Test");
+        log.info("Producters found '{}'", producers);
+
+
 
 
 

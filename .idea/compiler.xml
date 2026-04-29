@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="PARALLEL_COMPILATION_OPTION" value="Automatic" />
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/Maven/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/my-project/src/main/resources/archetype-resources" includeSubdirectories="true" />
